@@ -127,10 +127,10 @@ export default function Dashboard() {
                 <TableBody>
                   {invoices.map((invoice) => (
                     <TableRow key={invoice.invoice}>
-                      <TableCell className="font-medium">{invoice.invoice}</TableCell>
-                      <TableCell>{invoice.paymentStatus}</TableCell>
-                      <TableCell>{invoice.paymentMethod}</TableCell>
-                      <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+                      <TableCell className="font-medium whitespace-nowrap">{invoice.invoice}</TableCell>
+                      <TableCell className="whitespace-nowrap">{invoice.paymentStatus}</TableCell>
+                      <TableCell className="whitespace-nowrap">{invoice.paymentMethod}</TableCell>
+                      <TableCell className="text-right whitespace-nowrap">{invoice.totalAmount}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
