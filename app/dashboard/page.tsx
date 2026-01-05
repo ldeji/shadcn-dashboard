@@ -114,7 +114,8 @@ export default function Dashboard() {
               <CardTitle>Recent Sales</CardTitle>
             </CardHeader>
             <CardContent >
-              <Table>
+              <div className="overflow-x-auto">
+              <Table className="min-w-[600px]">
                 <TableHeader>
                   <TableRow>
                     <TableHead className="w-25 text-brand text-lg">INVOICE</TableHead>
@@ -134,6 +135,7 @@ export default function Dashboard() {
                   ))}
                 </TableBody>
               </Table>
+              </div>
             </CardContent>
           </Card>
         </div>
