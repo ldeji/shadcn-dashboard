@@ -113,29 +113,28 @@ export default function Dashboard() {
             <CardHeader>
               <CardTitle>Recent Sales</CardTitle>
             </CardHeader>
+
             <CardContent >
-              <div className="overflow-x-auto">
               <Table>
                 <TableHeader>
                   <TableRow>
                     <TableHead className="w-25 text-brand text-lg">INVOICE</TableHead>
-                    <TableHead className="text-brand text-lg">STATUS</TableHead>
-                    <TableHead className="text-brand text-lg">METHOD</TableHead>
+                    <TableHead className="text-brand text-lg hidden md:table-cell">STATUS</TableHead>
+                    <TableHead className="text-brand text-lg hidden md:table-cell">METHOD</TableHead>
                     <TableHead className="text-right text-brand text-lg">AMOUNT</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {invoices.map((invoice) => (
                     <TableRow key={invoice.invoice}>
-                      <TableCell className="font-medium whitespace-nowrap">{invoice.invoice}</TableCell>
-                      <TableCell className="whitespace-nowrap">{invoice.paymentStatus}</TableCell>
-                      <TableCell className="whitespace-nowrap">{invoice.paymentMethod}</TableCell>
-                      <TableCell className="text-right whitespace-nowrap">{invoice.totalAmount}</TableCell>
+                      <TableCell className="font-medium">{invoice.invoice}</TableCell>
+                      <TableCell className="hidden md:table-cell">{invoice.paymentStatus}</TableCell>
+                      <TableCell className="hidden md:table-cell">{invoice.paymentMethod}</TableCell>
+                      <TableCell className="text-right">{invoice.totalAmount}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
-              </div>
             </CardContent>
           </Card>
         </div>
