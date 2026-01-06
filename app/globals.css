@@ -127,10 +127,8 @@
 @theme {
   /* Your Primary Brand Green */
   --color-brand: #017963; 
-
-  /* Custom Navy Blue for backgrounds and text */
   --color-dark-navy: #0F172A;
-
-  /* Subtle Light Grey for borders/secondary backgrounds */
+  --color-medical-blue-1: #2563EB;
+  --color-medical-2: #0284c7;
   --color-light-gray: #E2E8F0; 
 }

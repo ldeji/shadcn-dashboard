@@ -16,8 +16,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-// 2. THE SCHEMA (The Rules)
-// This acts like a "Bouncer" at a club. It checks IDs.
+// 2. THE SCHEMA (The Rules) and This acts like a "Bouncer" at a club. It checks IDs.
 const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address.",
@@ -29,8 +28,7 @@ const formSchema = z.object({
 
 
 export default function LoginForm() {
-  // 3. THE HOOK (The Logic)
-  // This connects your form to the rules above.
+  // 3. THE HOOK (The Logic) and This connects your form to the rules above.
   const router = useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -48,9 +46,10 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="flex h-screen items-center justify-center bg-gray-100">
+    <div className="flex flex-col justify-center items-center gap-8 text-center h-screen bg-light-gray">
       {/* We use a Card to make it look nice */}
-      <Card className="w-[350px] shadow-lg bg bg-slate-900 border border-white">
+      <p className="text-2xl md:text-xl text-medical-blue-1 font-extrabold mb-4">Welcome to Doctor Akano's Clinic</p>
+      <Card className="w-90 h-90 shadow-lg bg bg-slate-900 border border-white">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center text-light-gray">Login</CardTitle>
         </CardHeader>
@@ -89,7 +88,7 @@ export default function LoginForm() {
                 )}
               />
 
-              <Button type="submit" className="w-full bg-brand hover:bg-brand/90 text-light-gray">
+              <Button type="submit" className="w-full bg-medical-blue-1 hover:bg-medical-2 text-light-gray transition-all duration-300 hover:-translate-y-1">
                 Sign In
               </Button>
             </form>

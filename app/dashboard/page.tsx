@@ -10,36 +10,36 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
-const invoices = [
+const patient = [
   {
-    invoice: "INV001",
-    paymentStatus: "Paid",
-    totalAmount: "#250.00",
-    paymentMethod: "Bank Transfer",
+    ID: "P-001",
+    name: "Ponle Akins",
+    status: "Checked In",
+    lastVisit: "Today",
   },
   {
-    invoice: "INV002",
-    paymentStatus: "Pending",
-    totalAmount: "#150.00",
-    paymentMethod: "Debit Card",
+    ID: "P-002",
+    name: "Omokaro Lawal",
+    status: "Waiting",
+    lastVisit: "Jan 5",
   },
   {
-    invoice: "INV003",
-    paymentStatus: "Unpaid",
-    totalAmount: "#350.00",
-    paymentMethod: "Bank Transfer",
+    ID: "P-003",
+    name: "Ben Carson",
+    status: "Completed",
+    lastVisit: "Yesterday",
   },
   {
-    invoice: "INV004",
-    paymentStatus: "Paid",
-    totalAmount: "#450.00",
-    paymentMethod: "Debit Card",
+    ID: "P-004",
+    name: "Dayo Rahman",
+    status: "Checked In",
+    lastVisit: "Jan 3",
   },
   {
-    invoice: "INV005",
-    paymentStatus: "Paid",
-    totalAmount: "#550.00",
-    paymentMethod: "Bank Transfer",
+    ID: "P-005",
+    name: "Lateef Dee",
+    status: "checked In",
+    lastVisit: "Today",
   },
 ]
 
@@ -49,9 +49,9 @@ export default function Dashboard() {
       
       {/* 1. TOP NAVIGATION BAR */}
       <div className="border-b-2 bg-light-gray p-10 flex justify-between items-center sticky top-0 z-10 shadow-xlg">
-        <h1 className="text-xl font-bold text-brand">My SaaS App</h1>
+        <h1 className="text-xl font-bold text-medical-blue-1">Medicare Portal</h1>
         <div className="flex items-center gap-4">
-          <span className="text-sm text-gray-500">Welcome, Lateef</span>
+          <span className="text-sm text-medical-blue-1">Welcome, Lateef</span>
           <Avatar>
             <AvatarImage src="./Passport.jpg" />
             <AvatarFallback>LA</AvatarFallback>
@@ -62,46 +62,46 @@ export default function Dashboard() {
       {/* 2. MAIN CONTENT AREA */}
       <div className="p-8">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold text-brand tracking-tight">Dashboard</h2>
-          <Button className="bg-brand text-white">Download Report</Button>
+          <h2 className="text-3xl font-bold text-medical-blue-1 tracking-tight">Dashboard</h2>
+          <Button className="bg-medical-blue-1 hover:text-light-gray hover:bg-medical-2 transition-all duration-300 text-white hover:-translate-y-1">Download Report</Button>
         </div>
 
         {/* 3. STATS CARDS GRID */}
         <div className="grid gap-4 md:grid-cols-3">
           
-          {/* Card 1: Revenue */}
-          <Card className="bg-dark-navy text-light-gray">
+          {/* Card 1: Patients */}
+          <Card className="bg-dark-navy text-medical-2">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
-              <span className="text-gray-500">#</span>
+              <CardTitle className="text-sm font-medium">Total Patients</CardTitle>
+              <span className="text-medical-blue-1">👨‍👩‍👧‍👦</span>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">#45,231.89</div>
-              <p className="text-xs text-gray-500">+20.1% from last month</p>
+              <div className="text-2xl font-bold">1,520</div>
+              <p className="text-xs text-medical-2">62 newly registered</p>
             </CardContent>
           </Card>
 
-          {/* Card 2: Subscriptions */}
-          <Card className="bg-dark-navy text-light-gray">
+          {/* Card 2: Appointments */}
+          <Card className="bg-dark-navy text-medical-2">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Subscriptions</CardTitle>
-              <span className="text-gray-500">Users</span>
+              <CardTitle className="text-sm font-medium">Appointments Today</CardTitle>
+              <span className="text-medical-blue-1">📅</span>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">+2350</div>
-              <p className="text-xs text-gray-500">+180.1% from last month</p>
+              <div className="text-2xl font-bold">15</div>
+              <p className="text-xs text-medical-2">3 patients cancelled</p>
             </CardContent>
           </Card>
 
-          {/* Card 3: Active Now */}
-          <Card className="bg-dark-navy text-light-gray">
+          {/* Card 3: Waiting */}
+          <Card className="bg-dark-navy text-medical-2">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Active Now</CardTitle>
-              <div className="h-4 w-4 rounded-full bg-green-500 animate-pulse"></div>
+              <CardTitle className="text-sm font-medium">Waiting Room</CardTitle>
+              <div className="h-4 w-4 rounded-full bg-medical-2 animate-pulse"></div>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">+573</div>
-              <p className="text-xs text-gray-500">+201 since last hour</p>
+              <div className="text-2xl font-bold">12</div>
+              <p className="text-xs text-medical-2">12 patients</p>
             </CardContent>
           </Card>
         </div>
@@ -109,7 +109,7 @@ export default function Dashboard() {
           {/* --- TABLE --- */}
         
         <div className="mt-14 grid gap-4 md:grid-cols-1">
-          <Card className="bg-dark-navy text-light-gray">
+          <Card className="bg-dark-navy text-medical-2">
             <CardHeader>
               <CardTitle>Recent Sales</CardTitle>
             </CardHeader>
@@ -118,19 +118,19 @@ export default function Dashboard() {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead className="w-25 text-brand text-lg">INVOICE</TableHead>
-                    <TableHead className="text-brand text-lg hidden md:table-cell">STATUS</TableHead>
-                    <TableHead className="text-brand text-lg hidden md:table-cell">METHOD</TableHead>
-                    <TableHead className="text-right text-brand text-lg">AMOUNT</TableHead>
+                    <TableHead className="w-25 text-medical-blue-1 text-lg">ID</TableHead>
+                    <TableHead className=" text-lg text-medical-blue-1">NAME</TableHead>
+                    <TableHead className=" text-lg hidden md:table-cell text-medical-blue-1">STATUS</TableHead>
+                    <TableHead className="text-right text-lg text-medical-blue-1">VISIT</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {invoices.map((invoice) => (
-                    <TableRow key={invoice.invoice}>
-                      <TableCell className="font-medium">{invoice.invoice}</TableCell>
-                      <TableCell className="hidden md:table-cell">{invoice.paymentStatus}</TableCell>
-                      <TableCell className="hidden md:table-cell">{invoice.paymentMethod}</TableCell>
-                      <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+                  {patient.map((patient) => (
+                    <TableRow key={patient.ID}>
+                      <TableCell className="font-medium text-medical-2">{patient.ID}</TableCell>
+                      <TableCell className="font-medium text-medical-2">{patient.name}</TableCell>
+                      <TableCell className="hidden text-medical-2 md:table-cell">{patient.status}</TableCell>
+                      <TableCell className="text-right text-medical-2">{patient.lastVisit}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
