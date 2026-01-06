@@ -48,7 +48,7 @@ export default function LoginForm() {
   return (
     <div className="flex flex-col justify-center items-center gap-8 text-center h-screen bg-light-gray">
       {/* We use a Card to make it look nice */}
-      <p className="text-2xl md:text-xl text-medical-blue-1 font-extrabold mb-4">Welcome to Doctor Akano's Clinic</p>
+      <p className="text-2xl md:text-1xl text-medical-blue-1 font-extrabold mb-4">Welcome to Doctor Akano's Clinic</p>
       <Card className="w-90 h-90 shadow-lg bg bg-slate-900 border border-white">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center text-light-gray">Login</CardTitle>
