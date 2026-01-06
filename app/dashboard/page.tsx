@@ -77,7 +77,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">1,520</div>
-              <p className="text-xs text-medical-2">62 newly registered</p>
+              <p className="text-xs text-light-gray">62 newly registered</p>
             </CardContent>
           </Card>
 
@@ -89,7 +89,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">15</div>
-              <p className="text-xs text-medical-2">3 patients cancelled</p>
+              <p className="text-xs text-light-gray">3 patients cancelled</p>
             </CardContent>
           </Card>
 
@@ -101,7 +101,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">12</div>
-              <p className="text-xs text-medical-2">12 patients</p>
+              <p className="text-xs text-light-gray">12 patients</p>
             </CardContent>
           </Card>
         </div>
@@ -127,10 +127,10 @@ export default function Dashboard() {
                 <TableBody>
                   {patient.map((patient) => (
                     <TableRow key={patient.ID}>
-                      <TableCell className="font-medium text-medical-2">{patient.ID}</TableCell>
-                      <TableCell className="font-medium text-medical-2">{patient.name}</TableCell>
-                      <TableCell className="hidden text-medical-2 md:table-cell">{patient.status}</TableCell>
-                      <TableCell className="text-right text-medical-2">{patient.lastVisit}</TableCell>
+                      <TableCell className="font-medium text-light-gray">{patient.ID}</TableCell>
+                      <TableCell className="font-medium text-light-gray">{patient.name}</TableCell>
+                      <TableCell className="hidden text-light-gray md:table-cell">{patient.status}</TableCell>
+                      <TableCell className="text-right text-light-gray">{patient.lastVisit}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
