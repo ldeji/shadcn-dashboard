@@ -1,3 +1,4 @@
+import { PatientChart } from "@/components/PatientChart"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
@@ -106,6 +107,13 @@ export default function Dashboard() {
           </Card>
         </div>
           
+
+        {/*4.  PATIENT CHART */}
+
+      <div className="mt-8 mb-8">
+        <PatientChart />
+      </div>
+
           {/* --- TABLE --- */}
         
         <div className="mt-14 grid gap-4 md:grid-cols-1">
