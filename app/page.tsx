@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-// 2. THE SCHEMA (The Rules) and This acts like a "Bouncer" at a club. It checks IDs.
+// 2. THE SCHEMA (The Muscle Guy😁) (The Rules) and This acts like a "Bouncer" at a club. You dey fill me abi? so gbadun mi?
 const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address.",
