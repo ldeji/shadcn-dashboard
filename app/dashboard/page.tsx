@@ -119,7 +119,7 @@ export default function Dashboard() {
         <div className="mt-14 grid gap-4 md:grid-cols-1">
           <Card className="bg-dark-navy text-medical-2">
             <CardHeader>
-              <CardTitle>Recent Sales</CardTitle>
+              <CardTitle>Recent Patients</CardTitle>
             </CardHeader>
 
             <CardContent >

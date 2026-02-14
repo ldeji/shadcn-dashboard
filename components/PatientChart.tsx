@@ -12,6 +12,7 @@ const chartData = [
   { month: "April", patients: 73 },
   { month: "May", patients: 209 },
   { month: "June", patients: 214 },
+  { month: "July", patients: 280 },
 ]
 
 // 2. Configuration
@@ -28,10 +29,10 @@ export function PatientChart() {
     <Card className="col-span-4">
       <CardHeader>
         <CardTitle>Patient Overview</CardTitle>
-        <CardDescription>Visits for the last 6 months</CardDescription>
+        <CardDescription>Visits for the last 7 months</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+        <ChartContainer config={chartConfig} className="min-h-50 w-full">
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis
